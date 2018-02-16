@@ -113,19 +113,19 @@
 								$option2 = $_GET["r_type2"];
 								switch ($option){
 										case 'id':
-												$sort = " ORDER BY order_id ";
+											$sort = " ORDER BY order_id ";
 											break;
 										case 'vard':
-												$sort = " ORDER BY client_name ";
+											$sort = " ORDER BY client_name ";
 											break;
 										case 'addr':
-												$sort = " ORDER BY client_addr ";
+											$sort = " ORDER BY client_addr ";
 											break;		
 										case 'amou':
-												$sort = " ORDER BY amount_ordered" ;
+											$sort = " ORDER BY amount_ordered" ;
 											break;
 										case 'kain':
-												$sort = " ORDER BY cost ";
+											$sort = " ORDER BY cost ";
 											break;																									
 								}									
 								switch ($option2){
