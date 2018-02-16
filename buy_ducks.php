@@ -15,6 +15,11 @@
 	$addr = $conn->real_escape_string($addr);
 	$amount = $_POST['amount'];
 	
+	if ($amount < 0){
+			$amount = $amount * -1;
+	}
+	
+	
 	$query = "SELECT * FROM variables";
 	$result = $conn->query($query);
 	$prices = $result->fetch_assoc();

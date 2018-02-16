@@ -39,7 +39,7 @@
 						<table>
 							<tr><td>Jusų pilnas vardas:</td><td> <input type="text" id="nam" name="name" required></td></tr>
 							<tr><td>Jusų adresas:</td><td> <input type="text" id="adr"  name="addr" required></td></tr>
-							<tr><td>Kiek ančių norite pirkti?:</td><td> <input type="number" id="amo" name="amount" required></td></tr>
+							<tr><td>Kiek ančių norite pirkti?:</td><td> <input type="number" id="amo" name="amount" min="0" required></td></tr>
 							<tr><td><input type="submit" value="pirkti!" ></td></tr>
 						</table>
 					</form>
