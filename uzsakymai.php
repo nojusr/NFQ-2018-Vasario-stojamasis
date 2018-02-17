@@ -43,9 +43,9 @@
 										<option value="kain">kainą</option>
 									</select>
 									<input type="text" name="s_query"><br>
-									Rūšiavimas:
+									Rikiavimas:
 									<select name="r_type">
-										<option value="">Rūšiuoti pagal:</option>
+										<option value="">Rikiuoti pagal:</option>
 										<option value="id">užsakymo numerį </option>
 										<option value="vard">vardą</option>
 										<option value="addr">adresą</option>
@@ -53,6 +53,7 @@
 										<option value="kain">kainą</option>
 									</select>
 									<select name="r_type2">
+										<option value="">Pasirinkti rikiavimo tipą</option>
 										<option value="desc">didžiausias -> mažiausias</option>
 										<option value="asc">mažiausias -> didžiausias</option>
 									</select><br>									
@@ -113,19 +114,19 @@
 								$option2 = $_GET["r_type2"];
 								switch ($option){
 										case 'id':
-											$sort = " ORDER BY order_id ";
+												$sort = " ORDER BY order_id ";
 											break;
 										case 'vard':
-											$sort = " ORDER BY client_name ";
+												$sort = " ORDER BY client_name ";
 											break;
 										case 'addr':
-											$sort = " ORDER BY client_addr ";
+												$sort = " ORDER BY client_addr ";
 											break;		
 										case 'amou':
-											$sort = " ORDER BY amount_ordered" ;
+												$sort = " ORDER BY amount_ordered" ;
 											break;
 										case 'kain':
-											$sort = " ORDER BY cost ";
+												$sort = " ORDER BY cost ";
 											break;																									
 								}									
 								switch ($option2){
@@ -141,7 +142,6 @@
 							#galutinio query pastatymas
 							$fq = $query.$sort.$limitq;
 							$result = $conn->query($fq);
-							
 							
 							#isvestis							
 							while($eilute = $result->fetch_assoc()){
@@ -176,4 +176,5 @@
 
 
 </html>
+
 
